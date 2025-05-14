@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000"/>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Busy Thermometer</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>Busy Thermometer</h1>
+      <div class="controls">
+        <select id="userLogin"></select>
+        <button id="logoutBtn">Log Out</button>
+        <button id="settingsBtn">⚙️</button>
+      </div>
+    </header>
+    <main>
+      <section id="thermometerSection">
+        <div id="thermometer"></div>
+        <div id="statusComment"></div>
+      </section>
+      <section id="userListSection">
+        <select id="sortOptions">
+          <option value="high">High to Low</option>
+          <option value="low">Low to High</option>
+          <option value="custom">Highest/Lowest</option>
+        </select>
+        <div id="userList"></div>
+      </section>
+    </main>
+    <footer>
+      <button id="viewStatusBtn">View Status</button>
+      <select id="statusSelect"></select>
+      <input type="text" id="commentInput" maxlength="150" placeholder="Optional comment..." />
+      <select id="expirySelect">
+        <option value="20">20 min</option>
+        <option value="40">40 min</option>
+        <option value="60">60 min</option>
+        <option value="0">Until logout</option>
+      </select>
+      <button id="updateStatusBtn">Update Status</button>
+      <button id="editCommentBtn">Edit Comment</button>
+      <button id="onItBtn">I am on it</button>
+      <button id="simulateShiftBtn">Simulate Shift</button>
+      <button id="resetAppBtn">Reset App</button>
+      <button id="refreshBtn">Refresh</button>
+      <button id="exportBtn">Export</button>
+      <div id="countdownTimer"></div>
+    </footer>
+    <div id="settingsModal" class="hidden">
+      <label><input type="checkbox" id="darkModeToggle" checked /> Dark Mode</label>
+      <label>
+        Sound:
+        <select id="notificationSound">
+          <option value="bell">Bell</option>
+          <option value="click">Click</option>
+        </select>
+      </label>
+      <label>
+        Refresh (1–15 min):
+        <input type="number" id="refreshRate" min="1" max="15" value="5" />
+      </label>
+      <button id="closeSettingsBtn">Close</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
