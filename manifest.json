@@ -1,10 +1,10 @@
 {
   "name": "Busy Thermometer",
-  "short_name": "Thermometer",
-  "start_url": "index.html",
+  "short_name": "ThermoApp",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#000000",
+  "background_color": "#1a1a1a",
+  "theme_color": "#1a1a1a",
   "icons": [
     {
       "src": "icons/192.png",

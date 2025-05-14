@@ -1,102 +1,60 @@
-/* General Styles */
+/* Base styles */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  background-color: #121212;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: white;
 }
-
-#app {
-  max-width: 800px;
-  width: 100%;
-  padding: 1rem;
-}
-
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.controls select,
-.controls button {
-  margin-left: 0.5rem;
-}
-
-/* Thermometer */
-#thermometerSection {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#thermometer {
-  width: 50px;
-  height: 300px;
-  border: 2px solid white;
-  position: relative;
+  padding: 1rem;
   background-color: #333;
 }
-
-.thermo-level {
-  position: absolute;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: black;
-  font-weight: bold;
-  border: 1px solid black;
+#thermometer-section {
+  margin: 1rem;
 }
-
-.level-1 { background: white; height: 16.66%; bottom: 0; }
-.level-2 { background: blue; height: 16.66%; bottom: 16.66%; }
-.level-3 { background: green; height: 16.66%; bottom: 33.33%; }
-.level-4 { background: yellow; height: 16.66%; bottom: 50%; }
-.level-5 { background: red; height: 16.66%; bottom: 66.66%; animation: pulse 2s infinite; }
-.level-6 { background: black; height: 16.66%; bottom: 83.33%; animation: pulse 2s infinite; color: white; }
-
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+#thermometer {
+  width: 60px;
+  height: 300px;
+  margin: 0 auto;
+  background: linear-gradient(to top, black 16.6%, red 33.2%, yellow 49.8%, green 66.4%, blue 83%, white 100%);
+  border: 2px solid white;
+  position: relative;
 }
-
-/* User List */
-#userList {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
+#user-list-section {
+  margin: 1rem;
 }
-
-.user {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid white;
+.list-header {
+  margin-bottom: 0.5rem;
+}
+#user-list {
+  list-style: none;
+  padding: 0;
+}
+#user-list li {
   padding: 0.5rem;
-  margin: 0.2rem 0;
-}
-
-.offline .status {
-  color: gray;
-}
-
-/* Modal */
-#settingsModal {
-  position: fixed;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #222;
-  padding: 1rem;
   border: 1px solid white;
-  z-index: 1000;
+  margin-bottom: 0.25rem;
 }
-
-.hidden {
+#settings-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
   display: none;
+}
+#settings-modal .modal-content {
+  background: #222;
+  padding: 1rem;
+  margin: 10% auto;
+  width: 300px;
+  border: 1px solid white;
+}
+#settings-modal.show {
+  display: block;
 }

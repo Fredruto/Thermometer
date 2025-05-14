@@ -1,2 +1,2 @@
-// Placeholder JS file for main interactivity
-console.log('Busy Thermometer loaded');
+// Placeholder for script.js
+console.log('Script loaded');
